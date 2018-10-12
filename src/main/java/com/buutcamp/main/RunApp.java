@@ -29,6 +29,7 @@ public class RunApp {
             System.out.print("Country info: ");
             String userInput = handleInput.getUserInput();
 
+            String[] inputs = userInput.split(" ");
             if (userInput.equals("exit"))
                 return;
 
@@ -49,6 +50,7 @@ public class RunApp {
                     input = handleInput.getUserInput();
                     userCountry.setCountryName(input);
                     countries.put(input, userCountry);
+                    countries.remove(userInput);
                 }else if (input.equals("pr")){
                     System.out.print("New president name: ");
                     input = handleInput.getUserInput();
