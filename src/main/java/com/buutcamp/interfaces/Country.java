@@ -7,6 +7,6 @@ public interface Country {
     public void setPresident(String president);
     public String getPresident();
 
-    public void setPopulation(int population);
-    public int getPopulation();
+    public void setPopulation(String population);
+    public String  getPopulation();
 }

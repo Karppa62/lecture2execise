@@ -13,7 +13,7 @@ public class Canada implements Country {
     @Value("${canadaPresident}")
     private String president;
     @Value("${canadaPopulation}")
-    private int population;
+    private String population;
 
 
     public void setCountryName(String name) {
@@ -32,11 +32,11 @@ public class Canada implements Country {
         return president;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(String population) {
         this.population = population;
     }
 
-    public int getPopulation() {
+    public String getPopulation() {
         return population;
     }
 }

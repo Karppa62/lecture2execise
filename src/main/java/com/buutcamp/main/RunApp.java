@@ -26,7 +26,7 @@ public class RunApp {
         countries.put(canada.getCountryName().toLowerCase(), canada);
 
         while (true) {
-            System.out.print("Country: ");
+            System.out.print("Country info: ");
             String userInput = handleInput.getUserInput();
 
             if (userInput.equals("exit"))
@@ -40,8 +40,28 @@ public class RunApp {
                 System.out.println("Country: " + userCountry.getCountryName());
                 System.out.println("President: " + userCountry.getPresident());
                 System.out.println("Population: " + userCountry.getPopulation());
-            }
 
+                System.out.print("Change " + userCountry.getCountryName() +
+                        " name(N), president(PR), population(PO): ");
+                String input = handleInput.getUserInput().toLowerCase();
+                if (input.equals("n")){
+                    System.out.print("New country name: ");
+                    input = handleInput.getUserInput();
+                    userCountry.setCountryName(input);
+                    countries.put(input, userCountry);
+                }else if (input.equals("pr")){
+                    System.out.print("New president name: ");
+                    input = handleInput.getUserInput();
+                    userCountry.setPresident(input);
+                }else if (input.equals("po")){
+                    System.out.print("New population: ");
+                    input = handleInput.getUserInput();
+                    userCountry.setPopulation(input);
+                }
+                else
+                    return;
+
+            }
         }
     }
 }
