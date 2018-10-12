@@ -29,7 +29,7 @@ public class RunApp {
             System.out.print("Country info: ");
             String userInput = handleInput.getUserInput();
 
-            String[] inputs = userInput.split(" ");
+           // String[] inputs = userInput.split(" ");
             if (userInput.equals("exit"))
                 return;
 
