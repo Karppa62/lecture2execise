@@ -1,5 +1,6 @@
 package com.buutcamp.inputhandle;
 
+import com.buutcamp.interfaces.Country;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -19,6 +20,12 @@ public class HandleInput {
             e.printStackTrace();
         }
         return userInput;
+    }
+
+    public void showCountryInfo(Country country) {
+        System.out.println("Country: " + country.getCountryName());
+        System.out.println("President: " + country.getPresident());
+        System.out.println("Population: " + country.getPopulation());
     }
 
 
